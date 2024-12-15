@@ -9,7 +9,7 @@ materias = {
             "Substância química: classificação e características gerais",
             "Misturas: tipos e métodos de separação"
         ],
-        "Átomo": [
+        "Átomooooooooo": [
             "Teorias e modelos atômicos dos átomos",
             "Estrutura atômica: número atômico, número de massa, número de nêutrons, isótopos, isóbaros e isótonos"
         ],
@@ -38,6 +38,7 @@ materias = {
         "Mecanismo de reações orgânicas": []
     },
     "Biologia": {
+        "Introdução ao estudo da biologia": [],
         "Bases da Biologia Molecular": [
             "Glicídios e Lipídios",
             "Estrutura do DNA e RNA",
@@ -118,28 +119,23 @@ materias = {
         "Antiguidade",
         "Grécia",
         "Roma",
-        "Idade Média",
         "Islamismo",
+        "Idade Média",
         "Antecedentes da Expansão Comercial Marítima Portuguesa",
         "Sistema Colonial e Colonização da América",
         "Absolutismo e Mercantilismo",
         "Renascimento Cultural e Reformas Religiosas",
         "Economia Açucareira, Trabalho Colonial, União Ibérica e Invasões Holandesas",
         "Iluminismo",
-        "Revoluções Burguesas",
-        "Inglaterra",
-        "Estados Unidos",
-        "França",
+        "Revoluções Burguesas Inglaterra, Estados Unidos, França",
         "Expansão Territorial Brasileira",
         "O Século do Ouro do Brasil",
         "Período Joanino e o Processo de Independência",
         "Independência das Colônias Ibéricas",
-        "Brasil Imperial",
         "Primeiro Império",
         "Período Regencial",
         "Revoluções Liberais do Século XIX",
         "Segundo Império",
-        "Brasil República",
         "Crise do Brasil Imperial e a República das Espadas",
         "Estados Unidos no Século XIX",
         "Imperialismo",
@@ -150,16 +146,37 @@ materias = {
         "República Oligárquica",
         "Era Vargas",
         "Guerra Fria",
-        "Brasil Pós-64",
-        "Ditadura Militar",
-        "Redemocratização e Populismo",
-        "Nova República",
-        "Atualidades e Conceitos",
-        "Mundo Contemporâneo",
         "China",
-        "Independência das Colônias da África e Ásia"
+        "Independência das Colônias da África e Ásia",
+        "Redemocratização e Populismo",
+        "Periodo Militar",
+        "Brasil Pós 85 a Nova República"
+        "Atualidades e Conceitos",
+        "Filosofia"
     ],
-    # Other subjects continue similarly...
+    "Físca": [
+        "Cinemática Escalar",
+        "Cinemática Vetorial",
+        "Leis de Newton",
+        "Atrito",
+        "Forças em trajetória curva",
+        "Energia (Principios da conservação)",
+        "Gravitação",
+        "Estática",
+        "Hidrostática",
+        "Temperatura e seus efeitos",
+        "Calor",
+        "Termodinâmica",
+        "Gases",
+        "Refração",
+        "Lentes",
+        "MHS",
+        "Ondas",
+        "Eletrostática",
+        "Eletrodinâmica",
+        "Eletromagnetismo",
+        "Unidades e Física Moderna"
+    ]
 }
 
 # Caminho base onde as pastas serão criadas
