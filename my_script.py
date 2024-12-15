@@ -9,7 +9,7 @@ materias = {
             "Substância química: classificação e características gerais",
             "Misturas: tipos e métodos de separação"
         ],
-        "Átomooooooooo": [
+        "Átomo": [
             "Teorias e modelos atômicos dos átomos",
             "Estrutura atômica: número atômico, número de massa, número de nêutrons, isótopos, isóbaros e isótonos"
         ],
@@ -176,8 +176,77 @@ materias = {
         "Eletrodinâmica",
         "Eletromagnetismo",
         "Unidades e Física Moderna"
-    ]
+    ],
+        "Língua Portuguesa e Arte": {
+        "Gramática": {
+            "Fonética": [
+                "Ortografia",
+                "Acentuação Gráfica"
+            ],
+            "Morfossintaxe": {
+                "Classes de Palavras": [
+                    "Substantivo",
+                    "Artigo",
+                    "Adjetivo",
+                    "Numeral",
+                    "Pronome",
+                    "Verbo",
+                    "Advérbio",
+                    "Preposição",
+                    "Conjunção",
+                    "Interjeição"
+                ],
+                "Estrutura e Formação de Palavras": [],
+                "Análise Sintática": [],
+                "Concordância Nominal e Verbal": {
+                    "Concordância Nominal": [],
+                    "Concordância Verbal": []
+                },
+                "Regência Nominal e Verbal": {
+                    "Regência Nominal": [],
+                    "Regência Verbal": []
+                },
+                "Pontuação": []
+            },
+            "Estilística": {
+                "Figuras de Linguagem": [],
+                "Estilo Direto, Indireto e Indireto Livre": []
+            }
+        },
+        "Literatura": {
+            "Literatura Portuguesa": [
+                "Trovadorismo",
+                "Humanismo",
+                "Classicismo",
+                "Barroco",
+                "Arcadismo",
+                "Romantismo",
+                "Realismo/Naturalismo",
+                "Parnasianismo",
+                "Modernismo"
+            ],
+            "Literatura Brasileira": {
+                "Literatura de Informação/Literatura dos Jesuítas": [],
+                "Barroco Brasileiro": [],
+                "Arcadismo Brasileiro": [],
+                "Romantismo Brasileiro": [],
+                "Realismo/Naturalismo Brasileiro": [],
+                "Parnasianismo Brasileiro": [],
+                "Simbolismo Brasileiro": [],
+                "Pré-Modernismo": [],
+                "Modernismo Brasileiro": [],
+                "Pós-Modernismo": []
+            }
+        },
+        "Arte": [
+            "A música como forma de linguagem",
+            "O teatro como forma de linguagem universal"
+        ],
+        "Textualidade, Produção e Interpretação de Texto": [],
+        "Norma Ortográfica": []
+    }
 }
+
 
 # Caminho base onde as pastas serão criadas
 base_path = 'materias_ensino'
