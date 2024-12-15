@@ -2,8 +2,8 @@ import os
 
 # Dicionário com nome da matéria como chave e tópicos como lista de valores
 materias = {
-    "Química": [
-        "Materiais: suas propriedades e uso": [
+        "Química": [
+                    "Materiais: suas propriedades e uso": [
             "Estados físicos da matéria e mudanças de estado",
             "Fenômenos físicos e químicos",
             "Substância química: classificação e características gerais",
@@ -37,7 +37,7 @@ materias = {
         "Isomeria": [],
         "Biomoléculas": [],
         "Mecanismo de reações orgânicas": [], 
-    ],
+        ],
     "Biologia": [
         "Bases da Biologia Molecular": [
             "Glicídios e Lipídios",
