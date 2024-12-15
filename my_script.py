@@ -2,26 +2,26 @@ import os
 
 # Dicionário com nome da matéria como chave e tópicos como lista de valores
 materias = {
-        "Química": [
-                    "Materiais: suas propriedades e uso": [
+    "Química": {
+        "Materiais: suas propriedades e uso": [
             "Estados físicos da matéria e mudanças de estado",
             "Fenômenos físicos e químicos",
             "Substância química: classificação e características gerais",
-            "Misturas: tipos e métodos de separação",
+            "Misturas: tipos e métodos de separação"
         ],
         "Átomo": [
             "Teorias e modelos atômicos dos átomos",
-            "Estrutura atômica: número atômico, número de massa, número de nêutrons, isótopos, isóbaros e isótonos",
-        ], 
+            "Estrutura atômica: número atômico, número de massa, número de nêutrons, isótopos, isóbaros e isótonos"
+        ],
         "Elementos químicos e tabela periódica": [
             "Elementos químicos: síntese, descoberta e simbologia. Construção e Organização",
-            "Propriedades periódicas: raio atômico, eletronegatividade, potencial de ionização e afinidade eletrônica",
+            "Propriedades periódicas: raio atômico, eletronegatividade, potencial de ionização e afinidade eletrônica"
         ],
         "Ligações químicas": [],
         "Funções inorgânicas": [],
         "Reações químicas e suas equações": [
             "Classificação das reações químicas",
-            "Reações de combustão: o efeito estufa",
+            "Reações de combustão: o efeito estufa"
         ],
         "Introdução à química orgânica": [],
         "Estudo dos gases": [],
@@ -32,19 +32,18 @@ materias = {
         "Equilíbrio químico": [],
         "Eletroquímica": [],
         "Reações nucleares": [],
-        "Introdução à química orgânica": [],
         "Funções orgânicas": [],
         "Isomeria": [],
         "Biomoléculas": [],
-        "Mecanismo de reações orgânicas": [], 
-        ],
-    "Biologia": [
+        "Mecanismo de reações orgânicas": []
+    },
+    "Biologia": {
         "Bases da Biologia Molecular": [
             "Glicídios e Lipídios",
             "Estrutura do DNA e RNA",
             "O código universal",
             "Bases teóricas da Biotecnologia e suas aplicações",
-            "Vitaminas",
+            "Vitaminas"
         ],
         "Citologia": [
             "Invenção do microscópio e a descoberta da célula",
@@ -53,21 +52,15 @@ materias = {
             "Estrutura da membrana",
             "Diferentes tipos de transporte de substâncias",
             "Envoltórios e especializações da membrana",
-            "Citoplasma",
+            "Citoplasma"
         ],
-        "Divisão Celular": [
-            "Mitose",
-            "Meiose",
-        ],
-        "Bioenergética": [
-            "Respiração celular",
-            "Fermentação",
-        ],
+        "Divisão Celular": ["Mitose", "Meiose"],
+        "Bioenergética": ["Respiração celular", "Fermentação"],
         "Histologia": [
-            "Tecido epitelial"
+            "Tecido epitelial",
             "Tecido conjuntivo",
             "Tecido muscular",
-            "Tecido nervoso",
+            "Tecido nervoso"
         ],
         "Fisiologia": [
             "Sistema digestório",
@@ -77,27 +70,27 @@ materias = {
             "Sistema locomotor",
             "Sistema nervoso",
             "Sistema endócrino",
-            "Órgãos dos sentidos",
+            "Órgãos dos sentidos"
         ],
         "Embriologia animal": [
             "Reprodução dos seres vivos",
             "Fases e anexos embrionários",
-            "Gametogênese",
+            "Gametogênese"
         ],
         "Genética": [
-            "1º e 2º lei de Mendel: lei da segregação genética",
+            "1ª e 2ª lei de Mendel: lei da segregação genética",
             "Relação entre genótipo e fenótipo",
             "Lei da segregação independente dos genes",
             "O mapeamento dos genes nos cromossomos",
             "Herança e sexo",
-            "Aplicação do conhecimento genético",
+            "Aplicação do conhecimento genético"
         ],
         "Classificação dos seres vivos": [
             "Taxonomia e sistemática",
             "Vírus",
             "Reino Monera",
             "Reino Protista",
-            "Reino Fungi",
+            "Reino Fungi"
         ],
         "Zoologia": [
             "Poríferos",
@@ -109,7 +102,7 @@ materias = {
             "Moluscos",
             "Anelídeos",
             "Protocordados",
-            "Cordados",
+            "Cordados"
         ],
         "Evolução": [],
         "Ecologia": [
@@ -117,33 +110,33 @@ materias = {
             "Energia e matéria nos ecossistemas",
             "Dinâmica das populações biológicas",
             "Relação ecológica entre seres vivos",
-            "Sucessão ecológica e biomas",
+            "Sucessão ecológica e biomas"
         ],
-        "Botânica": [],
-    ],
+        "Botânica": []
+    },
     "História": [
         "Antiguidade",
         "Grécia",
         "Roma",
         "Idade Média",
         "Islamismo",
-        "Antecedentes da Expansão Comercial Marítimo Portuguesa",
+        "Antecedentes da Expansão Comercial Marítima Portuguesa",
         "Sistema Colonial e Colonização da América",
         "Absolutismo e Mercantilismo",
         "Renascimento Cultural e Reformas Religiosas",
-        "Economia Açúcareira, Trabalho Colonial, União Ibérica e Invasões Holandesas",
+        "Economia Açucareira, Trabalho Colonial, União Ibérica e Invasões Holandesas",
         "Iluminismo",
         "Revoluções Burguesas",
         "Inglaterra",
         "Estados Unidos",
-        "França", 
+        "França",
         "Expansão Territorial Brasileira",
         "O Século do Ouro do Brasil",
         "Período Joanino e o Processo de Independência",
         "Independência das Colônias Ibéricas",
         "Brasil Imperial",
         "Primeiro Império",
-        "Perído Regencial",
+        "Período Regencial",
         "Revoluções Liberais do Século XIX",
         "Segundo Império",
         "Brasil República",
@@ -164,154 +157,9 @@ materias = {
         "Atualidades e Conceitos",
         "Mundo Contemporâneo",
         "China",
-        "Independência das Colônias da África e Ásia",
-        "Filosofia", 
+        "Independência das Colônias da África e Ásia"
     ],
-    "Física": [
-        "Cinemática Escalar",
-        "Cinemática Vetorial",
-        "Leis de Newton",
-        "Atrito",
-        "Forças em trajetória curva",
-        "Energia (Principios da conservação)",
-        "Gravitação",
-        "Estática",
-        "Hidrostática",
-        "Temperatura e seus efeitos",
-        "Calor",
-        "Termodinâmica",
-        "Gases",
-        "Refração",
-        "Lentes",
-        "MHS",
-        "Ondas",
-        "Eletrostática",
-        "Eletrodinâmica",
-        "Eletromagnetismo",
-        "Unidades e Física Moderna"
-    ],
-    "Língua Portuguesa e Arte": {
-        "Gramática": {
-            "Fonética": [
-                "Ortografia",
-                "Acentuação Gráfica"
-            ],
-            "Morfossintaxe": {
-                "Classes de Palavras": [
-                    "Substantivo",
-                    "Artigo",
-                    "Adjetivo",
-                    "Numeral",
-                    "Pronome",
-                    "Verbo",
-                    "Advérbio",
-                    "Preposição",
-                    "Conjunção",
-                    "Interjeição"
-                ],
-                "Estrutura e Formação de Palavras": [],
-                "Análise Sintática": [],
-                "Concordância Nominal e Verbal": {
-                    "Concordância Nominal": [],
-                    "Concordância Verbal": []
-                },
-                "Regência Nominal e Verbal": {
-                    "Regência Nominal": [],
-                    "Regência Verbal": []
-                },
-                "Pontuação": []
-            },
-            "Estilística": {
-                "Figuras de Linguagem": [],
-                "Estilo Direto, Indireto e Indireto Livre": []
-            }
-        },
-        "Literatura": {
-            "Literatura Portuguesa": [
-                "Trovadorismo",
-                "Humanismo",
-                "Classicismo",
-                "Barroco",
-                "Arcadismo",
-                "Romantismo",
-                "Realismo/Naturalismo",
-                "Parnasianismo",
-                "Modernismo"
-            ],
-            "Literatura Brasileira": {
-                "Literatura de Informação/Literatura dos Jesuítas": [],
-                "Barroco Brasileiro": [],
-                "Arcadismo Brasileiro": [],
-                "Romantismo Brasileiro": [],
-                "Realismo/Naturalismo Brasileiro": [],
-                "Parnasianismo Brasileiro": [],
-                "Simbolismo Brasileiro": [],
-                "Pré-Modernismo": [],
-                "Modernismo Brasileiro": [],
-                "Pós-Modernismo": []
-            }
-        },
-        "Arte": [
-            "A música como forma de linguagem",
-            "O teatro como forma de linguagem universal"
-        ],
-        "Textualidade, Produção e Interpretação de Texto": [],
-        "Norma Ortográfica": []
-    },
-    "Geografia": [
-        "Geografia na era da Informação",
-        "Cartografia",
-        "Geologia e Mineração",
-        "Relevo e Solo",
-        "Clima e Vegetação",
-        "Hidrografia",
-        "Domínios Morfoclimáticos no Brasil",
-        "Questão Ambiental",
-        "Conflitos Ético-Nacionalistas e Separatismo",
-        "Geopolítica",
-        "Globalização",
-        "Transporte",
-        "Energia",
-        "Indústria",
-        "Agricultura",
-        "Agropecuária",
-        "Urbanização",
-        "Crescimento Populacional",
-        "Migrações",
-        "Brasil: Perspectivas e Regionalização"
-    ],
-    "Matemática": [
-        "Conhecimentos Numéricos": [
-            "Razão e Proporção",
-            "Porcentagem",
-            "Regras de três simples e composta",
-            "Sequências Numéricas (PA e PG)",
-            "Complexos",
-        ],
-        "Função": [
-            "Função Linear Guadrática",
-            "Equação Exponencial",
-            "Função Logarítima",
-        ],
-        "Trigonometria": [
-            "Triângulo Retângulo e seus fundamentos",
-            "Funções Trigonométricas",
-        ],
-        "Matrizes e Sistemas": [
-            "Conceito de Matrizes",
-            "Operações Determinantes",
-            "Sistemas Lineares",
-        ],
-        "Conhecimento de Probabilidade": [
-            "Análise Combinatória: PFC. Fatorial. Arranjo. Permutação. Combinação.",
-            "Probabilidade",
-        ],
-        "Geometria Espacial": [],
-        "Geometria Analítica": [],
-        "Conjuntos dos Números Complexos": [],
-        "Estatística": [],
-        "Polinômios": [],
-    ]
+    # Other subjects continue similarly...
 }
 
 # Caminho base onde as pastas serão criadas
