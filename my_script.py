@@ -1,27 +1,47 @@
 import os
 
-# Dicionário com nome da matéria como chave e tópicos como lista de valores
+def create_nested_folders(base_path, structure):
+    """
+    Recursively create folders based on a nested dictionary structure.
+
+    :param base_path: The base directory where folders will be created.
+    :param structure: A dictionary representing the folder structure.
+    """
+    for folder, content in structure.items():
+        # Create the current folder
+        current_path = os.path.join(base_path, folder)
+        os.makedirs(current_path, exist_ok=True)
+
+        # If the content is a dictionary, go deeper
+        if isinstance(content, dict):
+            create_nested_folders(current_path, content)
+        # If the content is a list, create subfolders for each item
+        elif isinstance(content, list):
+            for subfolder in content:
+                os.makedirs(os.path.join(current_path, subfolder), exist_ok=True)
+
+# Define the folder structure
 materias = {
     "Química": {
         "Materiais: suas propriedades e uso": [
             "Estados físicos da matéria e mudanças de estado",
             "Fenômenos físicos e químicos",
             "Substância química: classificação e características gerais",
-            "Misturas: tipos e métodos de separação"
+            "Misturas: tipos e métodos de separação",
         ],
         "Átomo": [
             "Teorias e modelos atômicos dos átomos",
-            "Estrutura atômica: número atômico, número de massa, número de nêutrons, isótopos, isóbaros e isótonos"
+            "Estrutura atômica: número atômico, número de massa, número de nêutrons, isótopos, isóbaros e isótonos",
         ],
         "Elementos químicos e tabela periódica": [
             "Elementos químicos: síntese, descoberta e simbologia. Construção e Organização",
-            "Propriedades periódicas: raio atômico, eletronegatividade, potencial de ionização e afinidade eletrônica"
+            "Propriedades periódicas: raio atômico, eletronegatividade, potencial de ionização e afinidade eletrônica",
         ],
         "Ligações químicas": [],
         "Funções inorgânicas": [],
         "Reações químicas e suas equações": [
             "Classificação das reações químicas",
-            "Reações de combustão: o efeito estufa"
+            "Reações de combustão: o efeito estufa",
         ],
         "Introdução à química orgânica": [],
         "Estudo dos gases": [],
@@ -32,19 +52,19 @@ materias = {
         "Equilíbrio químico": [],
         "Eletroquímica": [],
         "Reações nucleares": [],
+        "Introdução à química orgânica": [],
         "Funções orgânicas": [],
         "Isomeria": [],
         "Biomoléculas": [],
-        "Mecanismo de reações orgânicas": []
+        "Mecanismo de reações orgânicas": [],
     },
     "Biologia": {
-        "Introdução ao estudo da biologia": [],
         "Bases da Biologia Molecular": [
             "Glicídios e Lipídios",
             "Estrutura do DNA e RNA",
             "O código universal",
             "Bases teóricas da Biotecnologia e suas aplicações",
-            "Vitaminas"
+            "Vitaminas",
         ],
         "Citologia": [
             "Invenção do microscópio e a descoberta da célula",
@@ -53,15 +73,21 @@ materias = {
             "Estrutura da membrana",
             "Diferentes tipos de transporte de substâncias",
             "Envoltórios e especializações da membrana",
-            "Citoplasma"
+            "Citoplasma",
         ],
-        "Divisão Celular": ["Mitose", "Meiose"],
-        "Bioenergética": ["Respiração celular", "Fermentação"],
+        "Divisão Celular": [
+            "Mitose",
+            "Meiose",
+        ],
+        "Bioenergética": [
+            "Respiração celular",
+            "Fermentação",
+        ],
         "Histologia": [
-            "Tecido epitelial",
+            "Tecido epitelial"
             "Tecido conjuntivo",
             "Tecido muscular",
-            "Tecido nervoso"
+            "Tecido nervoso",
         ],
         "Fisiologia": [
             "Sistema digestório",
@@ -71,27 +97,27 @@ materias = {
             "Sistema locomotor",
             "Sistema nervoso",
             "Sistema endócrino",
-            "Órgãos dos sentidos"
+            "Órgãos dos sentidos",
         ],
         "Embriologia animal": [
             "Reprodução dos seres vivos",
             "Fases e anexos embrionários",
-            "Gametogênese"
+            "Gametogênese",
         ],
         "Genética": [
-            "1ª e 2ª lei de Mendel: lei da segregação genética",
+            "1º e 2º lei de Mendel: lei da segregação genética",
             "Relação entre genótipo e fenótipo",
             "Lei da segregação independente dos genes",
             "O mapeamento dos genes nos cromossomos",
             "Herança e sexo",
-            "Aplicação do conhecimento genético"
+            "Aplicação do conhecimento genético",
         ],
         "Classificação dos seres vivos": [
             "Taxonomia e sistemática",
             "Vírus",
             "Reino Monera",
             "Reino Protista",
-            "Reino Fungi"
+            "Reino Fungi",
         ],
         "Zoologia": [
             "Poríferos",
@@ -103,7 +129,7 @@ materias = {
             "Moluscos",
             "Anelídeos",
             "Protocordados",
-            "Cordados"
+            "Cordados",
         ],
         "Evolução": [],
         "Ecologia": [
@@ -111,31 +137,36 @@ materias = {
             "Energia e matéria nos ecossistemas",
             "Dinâmica das populações biológicas",
             "Relação ecológica entre seres vivos",
-            "Sucessão ecológica e biomas"
-        ],
-        "Botânica": []
+            "Sucessão ecológica e biomas",
+                ],
+        "Botânica": [],
     },
     "História": [
         "Antiguidade",
         "Grécia",
         "Roma",
-        "Islamismo",
         "Idade Média",
-        "Antecedentes da Expansão Comercial Marítima Portuguesa",
+        "Islamismo",
+        "Antecedentes da Expansão Comercial Marítimo Portuguesa",
         "Sistema Colonial e Colonização da América",
         "Absolutismo e Mercantilismo",
         "Renascimento Cultural e Reformas Religiosas",
-        "Economia Açucareira, Trabalho Colonial, União Ibérica e Invasões Holandesas",
+        "Economia Açúcareira, Trabalho Colonial, União Ibérica e Invasões Holandesas",
         "Iluminismo",
-        "Revoluções Burguesas Inglaterra, Estados Unidos, França",
+        "Revoluções Burguesas",
+        "Inglaterra",
+        "Estados Unidos",
+        "França",
         "Expansão Territorial Brasileira",
         "O Século do Ouro do Brasil",
         "Período Joanino e o Processo de Independência",
         "Independência das Colônias Ibéricas",
+        "Brasil Imperial",
         "Primeiro Império",
-        "Período Regencial",
+        "Perído Regencial",
         "Revoluções Liberais do Século XIX",
         "Segundo Império",
+        "Brasil República",
         "Crise do Brasil Imperial e a República das Espadas",
         "Estados Unidos no Século XIX",
         "Imperialismo",
@@ -146,15 +177,17 @@ materias = {
         "República Oligárquica",
         "Era Vargas",
         "Guerra Fria",
+        "Brasil Pós-64",
+        "Ditadura Militar",
+        "Redemocratização e Populismo",
+        "Nova República",
+        "Atualidades e Conceitos",
+        "Mundo Contemporâneo",
         "China",
         "Independência das Colônias da África e Ásia",
-        "Redemocratização e Populismo",
-        "Periodo Militar",
-        "Brasil Pós 85 a Nova República"
-        "Atualidades e Conceitos",
-        "Filosofia"
+        "Filosofia",
     ],
-    "Físca": [
+    "Física": [
         "Cinemática Escalar",
         "Cinemática Vetorial",
         "Leis de Newton",
@@ -177,24 +210,24 @@ materias = {
         "Eletromagnetismo",
         "Unidades e Física Moderna"
     ],
-        "Língua Portuguesa e Arte": {
+    "Língua Portuguesa e Arte": {
         "Gramática": {
             "Fonética": [
                 "Ortografia",
                 "Acentuação Gráfica"
-            ],
+                ],
             "Morfossintaxe": {
                 "Classes de Palavras": [
-                    "Substantivo",
-                    "Artigo",
-                    "Adjetivo",
-                    "Numeral",
-                    "Pronome",
-                    "Verbo",
-                    "Advérbio",
-                    "Preposição",
-                    "Conjunção",
-                    "Interjeição"
+                "Substantivo",
+                "Artigo",
+                "Adjetivo",
+                "Numeral",
+                "Pronome",
+                "Verbo",
+                "Advérbio",
+                "Preposição",
+                "Conjunção",
+                "Interjeição"
                 ],
                 "Estrutura e Formação de Palavras": [],
                 "Análise Sintática": [],
@@ -237,36 +270,74 @@ materias = {
                 "Modernismo Brasileiro": [],
                 "Pós-Modernismo": []
             }
-        },
+            },
         "Arte": [
             "A música como forma de linguagem",
             "O teatro como forma de linguagem universal"
         ],
         "Textualidade, Produção e Interpretação de Texto": [],
         "Norma Ortográfica": []
+    },
+    "Geografia": [
+        "Geografia na era da Informação",
+        "Cartografia",
+        "Geologia e Mineração",
+        "Relevo e Solo",
+        "Clima e Vegetação",
+        "Hidrografia",
+        "Domínios Morfoclimáticos no Brasil",
+        "Questão Ambiental",
+        "Conflitos Ético-Nacionalistas e Separatismo",
+        "Geopolítica",
+        "Globalização",
+        "Transporte",
+        "Energia",
+        "Indústria",
+        "Agricultura",
+        "Agropecuária",
+        "Urbanização",
+        "Crescimento Populacional",
+        "Migrações",
+        "Brasil: Perspectivas e Regionalização"
+    ],
+    "Matemática": {
+        "Conhecimentos Numéricos": [
+            "Razão e Proporção",
+            "Porcentagem",
+            "Regras de três simples e composta",
+            "Sequências Numéricas (PA e PG)",
+            "Complexos",
+        ],
+        "Função": [
+            "Função Linear Guadrática",
+            "Equação Exponencial",
+            "Função Logarítima",
+        ],
+        "Trigonometria": [
+            "Triângulo Retângulo e seus fundamentos",
+            "Funções Trigonométricas",
+        ],
+        "Matrizes e Sistemas": [
+            "Conceito de Matrizes",
+            "Operações Determinantes",
+            "Sistemas Lineares",
+        ],
+        "Conhecimento de Probabilidade": [
+            "Análise Combinatória: PFC. Fatorial. Arranjo. Permutação. Combinação.",
+            "Probabilidade",
+        ],
+        "Geometria Espacial": [],
+        "Geometria Analítica": [],
+        "Conjuntos dos Números Complexos": [],
+        "Estatística": [],
+        "Polinômios": [],
     }
-}
+} 
 
+# Define the base path where folders will be created
+base_path = "materias_ensino"
 
-# Caminho base onde as pastas serão criadas
-base_path = 'materias_ensino'
+# Create the folder structure
+create_nested_folders(base_path, materias)
 
-# Função para criar as pastas
-def criar_pastas(base_path, materias):
-    if not os.path.exists(base_path):
-        os.makedirs(base_path)
-    
-    for materia, topicos in materias.items():
-        # Cria pasta para cada matéria
-        materia_path = os.path.join(base_path, materia)
-        if not os.path.exists(materia_path):
-            os.makedirs(materia_path)
-        
-        # Cria subpastas para os tópicos de cada matéria
-        for topico in topicos:
-            topico_path = os.path.join(materia_path, topico)
-            if not os.path.exists(topico_path):
-                os.makedirs(topico_path)
-
-# Chama a função para criar as pastas
-criar_pastas(base_path, materias)
+print(f"Folder structure created successfully in '{base_path}'!")
